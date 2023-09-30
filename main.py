@@ -67,12 +67,12 @@ print("w=", w_pla)
 wrongCases_train_pla = 0
 wrongCases_test_pla = 0
 
-for i in range(n_train):
+for i in range(n_train*2):
     if np.dot(w_pla, x_train[i]) * y_train[i] <= 0:
         wrongCases_train_pla += 1
 wrongRate_train_pla = wrongCases_train_pla / n_train
 
-for i in range(n_test):
+for i in range(n_test*2):
     if np.dot(w_pla, x_test[i]) * y_test[i] <= 0:
         wrongCases_test_pla += 1
 wrongRate_test_pla = wrongCases_test_pla / n_test
